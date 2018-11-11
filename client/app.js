@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {playRandomTrio} from './magenta-random'
+import {PlayRandom, AnalyseLyrics} from './components'
 //import { generateLyrics } from ///??????!!!///
 
 class App extends Component {
@@ -7,7 +8,6 @@ class App extends Component {
     super(props)
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
-
     this.state = {
       selectedMood: 'neutral'
     }
@@ -25,9 +25,8 @@ class App extends Component {
     return (
       <div>
         <h1>BAD MUSICIAN</h1>
-        <button type="button" id="play" onClick={playRandomTrio}>
-          Play random
-        </button>
+        <AnalyseLyrics />
+        <PlayRandom playRandomTrio={playRandomTrio} />
         <form id="lyrics">
           <div id="mood">
             <label>

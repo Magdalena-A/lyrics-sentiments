@@ -7,11 +7,10 @@ import {withRouter, Route, Switch} from 'react-router-dom'
  */
 class Routes extends Component {
   // componentDidMount() {
-    
+
   // }
 
   render() {
-
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
@@ -24,7 +23,7 @@ class Routes extends Component {
 
 /**
  * CONTAINER
-//  */
+ //  */
 // const mapState = state => {
 //   return {
 //     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
@@ -39,7 +38,7 @@ class Routes extends Component {
 //       dispatch(me())
 //     }
 //   }
-}
+// }
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes

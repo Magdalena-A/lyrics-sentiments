@@ -37,6 +37,8 @@
   "author": "Magdalena Aichinger, Fullstack Academy of Code",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/language": "^2.0.0",
+    "@magenta/music": "^1.2.3",
     "axios": "^0.15.3",
     "compression": "^1.7.3",
     "connect-session-sequelize": "^6.0.0",
