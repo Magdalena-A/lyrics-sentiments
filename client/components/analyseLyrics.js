@@ -20,8 +20,7 @@ class AnalyseLyrics extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  handleSubmit(event) {
-    event.preventDefault()
+  handleSubmit() {
     axios
       .post('/api/song', {
         artist: this.state.artist,
@@ -39,34 +38,40 @@ class AnalyseLyrics extends Component {
 
   render() {
     return (
-      <div>
+      <div className="flex-row">
         <div className="form">
           <form onSubmit={this.handleSubmit}>
-            <label>
-              Artist
-              <input type="text" name="artist" onChange={this.handleChange} />
-            </label>
-            <label>
-              Title
-              <input type="text" name="title" onChange={this.handleChange} />
-            </label>
-            <label>
-              Lyrics
-              <textarea
-                type="textarea"
-                name="lyrics"
-                onChange={this.handleChange}
-              />
-            </label>
-            <button type="submit">Analyse Lyrics!</button>
+            <div>
+              <div className="inputCombo">
+                <label>Artist</label>
+                <input type="text" name="artist" onChange={this.handleChange} />
+              </div>
+              <div className="inputCombo">
+                <label>Title</label>
+                <input type="text" name="title" onChange={this.handleChange} />
+              </div>
+              <div className="inputCombo">
+                <label>Lyrics</label>
+                <textarea
+                  type="textarea"
+                  name="lyrics"
+                  onChange={this.handleChange}
+                />
+              </div>
+            </div>
           </form>
         </div>
-        <div>
-          <div>
+        <div className="column">
+          <div id="submitButton">
+            <button type="button" onClick={this.handleSubmit}>
+              Analyze Lyrics!
+            </button>
+          </div>
+          <div className="score">
             Sentiment score:
             {!this.state.analysed ? '' : this.state.sentimentScore}
           </div>
-          <div>
+          <div className="score">
             Sentiment magnitude:
             {!this.state.analysed ? '' : this.state.sentimentMagnitude}
           </div>

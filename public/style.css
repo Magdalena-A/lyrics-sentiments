@@ -1,5 +1,8 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #211745;
+  padding: 15px;
+  padding-left: 30px;
 }
 
 a {
@@ -15,7 +18,54 @@ nav a {
   margin: 1em;
 }
 
+.flex-row {
+  display: flex;
+  direction: row;
+}
+
 form div {
   margin: 1em;
-  display: inline-block;
+}
+
+form label {
+  width: 100px;
+}
+
+form input {
+  width: 30vw;
+}
+
+form textarea {
+  width: 30vw;
+  height: 50vh;
+}
+
+.column {
+  display: flex;
+}
+
+button {
+  padding: 1em 2em;
+}
+
+#playButton {
+  position: fixed;
+  left: 75vw;
+  top: 5vh;
+  display: flex;
+}
+
+#play {
+  margin: 3px;
+  border-color: #211745;
+}
+.active {
+  background-color: rgb(231, 166, 142);
+}
+
+.loading {
+  padding: 1em;
+  text-align: center;
+  font-size: 10px;
+  animation: pulsing-fade 1.2s;
 }

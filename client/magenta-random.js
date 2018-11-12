@@ -6,7 +6,4 @@ const model = new mm.MusicVAE(
 )
 const player = new mm.Player()
 
-export const playRandomTrio = () => {
-  player.resumeContext() // enable audio
-  model.sample(1).then(samples => player.start(samples[0], 80))
-}
+export {player, model}
