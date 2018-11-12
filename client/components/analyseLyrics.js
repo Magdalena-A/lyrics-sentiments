@@ -61,19 +61,21 @@ class AnalyseLyrics extends Component {
             </div>
           </form>
         </div>
-        <div className="column">
-          <div id="submitButton">
-            <button type="button" onClick={this.handleSubmit}>
-              Analyze Lyrics!
-            </button>
-          </div>
-          <div className="score">
-            Sentiment score:
-            {!this.state.analysed ? '' : this.state.sentimentScore}
-          </div>
-          <div className="score">
-            Sentiment magnitude:
-            {!this.state.analysed ? '' : this.state.sentimentMagnitude}
+        <div className="flex-column">
+          <div>
+            <div id="submitButton">
+              <button type="button" onClick={this.handleSubmit}>
+                Analyze Lyrics!
+              </button>
+            </div>
+            <div className="score">
+              Sentiment score:
+              {!this.state.analysed ? '' : this.state.sentimentScore}
+            </div>
+            <div className="score">
+              Sentiment magnitude:
+              {!this.state.analysed ? '' : this.state.sentimentMagnitude}
+            </div>
           </div>
         </div>
       </div>

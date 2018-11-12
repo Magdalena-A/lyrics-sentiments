@@ -3,10 +3,19 @@ body {
   color: #211745;
   padding: 15px;
   padding-left: 30px;
+  padding-right: 30px;
+  width: 100vw;
 }
 
 a {
   text-decoration: none;
+}
+
+h3 {
+  padding: 10px;
+  border-style: solid none none none;
+  width: 80vw;
+  color: #24194e63;
 }
 
 label {
@@ -40,12 +49,31 @@ form textarea {
   height: 50vh;
 }
 
-.column {
+.flex-column {
   display: flex;
+  direction: column;
+  margin: 1em;
+  width: 100%;
+}
+
+.score {
+  font-size: 1.3em;
+  padding: 20px 0px;
 }
 
 button {
   padding: 1em 2em;
+  margin: 3px;
+  border-color: #211745;
+}
+
+#submitButton button {
+  font-size: 1.1em;
+  font-weight: 120%;
+  color: white;
+  background-color: #211745;
+  margin: 10px;
+  margin-left: 0;
 }
 
 #playButton {
@@ -53,12 +81,9 @@ button {
   left: 75vw;
   top: 5vh;
   display: flex;
+  z-index: 1;
 }
 
-#play {
-  margin: 3px;
-  border-color: #211745;
-}
 .active {
   background-color: rgb(231, 166, 142);
 }
@@ -68,4 +93,8 @@ button {
   text-align: center;
   font-size: 10px;
   animation: pulsing-fade 1.2s;
+}
+
+.header {
+  text-align: center;
 }
