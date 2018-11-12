@@ -11,7 +11,7 @@ const App = props => {
           <h1>Lyrics Sentiments</h1>
           <h3>all the feels</h3>
         </div>
-        <div>
+        <div className="center-block">
           <AnalyseLyrics />
         </div>
       </div>

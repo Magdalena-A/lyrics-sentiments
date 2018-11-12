@@ -6,7 +6,7 @@ module.exports = router
 
 router.post('/', async (req, res, next) => {
   const songFromDB = await Song.findAll({where: {title: req.body.title}})
-  if (songFromDB.length > 0) {
+  if (songFromDB.length > 0 && songFromDB[0].title.length > 0) {
     res.json(songFromDB)
   }
 
