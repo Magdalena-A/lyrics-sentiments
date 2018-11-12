@@ -19,6 +19,10 @@ h3 {
   color: #24194e63;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 label {
   display: block;
 }
@@ -69,6 +73,12 @@ form textarea {
 .score {
   font-size: 1.3em;
   padding: 20px 0px;
+  width: 500px;
+}
+
+.score span {
+  display: inline-block;
+  width: 500px;
 }
 
 button {
@@ -107,4 +117,8 @@ button {
 
 .header {
   text-align: center;
+}
+
+textarea {
+  font-size: 15px;
 }
