@@ -1,11 +1,11 @@
-const GOOGLE_APPLICATION_CREDENTIALS = require('../../secrets')
+const {GOOGLE_APPLICATION_CREDENTIALS, PROJECT_ID} = require('../../secrets')
 
 // Imports the Google Cloud client library
 const language = require('@google-cloud/language')
 
 // Instantiates a client
 const client = new language.LanguageServiceClient({
-  projectId: 'gh-stackathon',
+  projectId: PROJECT_ID,
   keyFilename: GOOGLE_APPLICATION_CREDENTIALS
 })
 
